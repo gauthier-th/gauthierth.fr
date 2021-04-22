@@ -8,9 +8,11 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "framer-motion": "^4.1.8",
     "next": "latest",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-feather": "^2.0.9"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
