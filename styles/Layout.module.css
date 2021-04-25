@@ -9,10 +9,6 @@
   width: 100%;
 }
 
-.header {
-
-}
-
 .gradient {
   background: linear-gradient(270deg, #572DFF 4.66%, rgba(158, 134, 255, 0.508197) 62.51%, rgba(255, 255, 255, 0) 100.03%),
               linear-gradient(0deg, #0DC5FF, #0DC5FF);

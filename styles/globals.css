@@ -8,7 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 20px;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -81,4 +81,31 @@ button:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+.gradientButton {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 18px;
+  color: #fff;
+  font-size: 16px;
+  background: linear-gradient(270deg, #572DFF 4.66%, rgba(158, 134, 255, 0.508197) 62.51%, rgba(255, 255, 255, 0) 100.03%), linear-gradient(0deg, #0DC5FF, #0DC5FF);
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.gradientButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color ease 0.2s;
+}
+.gradientButton:hover::before {
+  background-color: rgba(0, 0, 0, 0.1);
 }
