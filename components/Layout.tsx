@@ -4,18 +4,20 @@ import Head from 'next/head'
 import { motion, Variants, Transition } from 'framer-motion'
 import { GitHub, ChevronRight } from 'react-feather'
 import styles from '../styles/Layout.module.css'
+import { Translation, getData } from '../components/i18n'
 
 type Props = {
   children?: ReactNode
   pageTitle?: string,
   title?: string,
-  isIndex?: boolean
+  isIndex?: boolean,
+  locale: string
 }
 
-const Layout = ({ children, pageTitle, title, isIndex }: Props) => {
+const Layout = ({ children, pageTitle, title, isIndex, locale }: Props) => {
   return <div className={styles.container}>
     <Head>
-      <title>{pageTitle ? pageTitle.trim() + " | Gauthier's website" : "Gauthier's website"}</title>
+      <title>{pageTitle ? pageTitle.trim() + " | " + getData(locale, 'Website title') : getData(locale, 'Website title')}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
@@ -53,26 +55,24 @@ const Layout = ({ children, pageTitle, title, isIndex }: Props) => {
     <footer className={styles.footer}>
       <motion.div layoutId="footer-made" transition={sealTransition}>
         <a href="https://github.com/gauthier-th" target="_blank">
-          Made with{' '}
-          <img src="https://twemoji.maxcdn.com/svg/2764.svg" alt="Seal Image" className={styles.heart} />
-          {' '}by me.
+          <Translation locale={locale} translation='Footer made by' />
         </a>
       </motion.div>
       {!isIndex && <TitleTransition initial={{ opacity: 0, translateY: "30px", scale: 0.8 }}>
         <div className={styles.links}>
           <Link href="/">
             <a>
-              Home
+              {getData(locale, 'Footer link home')}
             </a>
           </Link>
           <Link href="/projects">
             <a>
-              My projects
+              {getData(locale, 'Footer link projects')}
             </a>
           </Link>
           <Link href="/contact">
             <a>
-              Contact me
+              {getData(locale, 'Footer link contact')}
             </a>
           </Link>
         </div>

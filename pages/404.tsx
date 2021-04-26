@@ -1,16 +1,15 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import { Translation, getTitle } from '../components/i18n'
 
-const ErrorPage = () => (
-  <Layout title="Page not found" pageTitle="Page not found">
+const ErrorPage = ({ locale }: { locale: string }) => (
+  <Layout {...getTitle(locale, '404')}>
     <p>
-      Sorry, but I can't find the page you're looking for.
-      <br />
-      You should probably come back to homepage.
+      <Translation locale={locale} translation='Error page description' />
     </p>
     <Link href="/">
       <a className="gradientButton">
-        Home here!!
+        <Translation locale={locale} translation='Error page button' />
       </a>
     </Link>
   </Layout>

@@ -4,6 +4,7 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion"
 import { GitHub, Archive, Mail } from 'react-feather'
 import styles from '../styles/index.module.css'
 import Layout from '../components/Layout'
+import { Translation, getTitle, getData } from '../components/i18n'
 
 type Tile = {
   icon: ReactNode
@@ -12,24 +13,26 @@ type Tile = {
   blank?: boolean
 }
 
-const tiles: Tile[] = [
-  {
-    icon: <GitHub color="black" />,
-    desc: "Follow me on GitHub",
-    href: "https://github.com/gauthier-th",
-    blank: true
-  },
-  {
-    icon: <Archive color="black" />,
-    desc: "Check my projects",
-    href: "/projects"
-  },
-  {
-    icon: <Mail color="black" />,
-    desc: "How to contact me",
-    href: "/contact"
-  }
-]
+const tiles = (locale: string): Tile[] => (
+  [
+    {
+      icon: <GitHub color="black" />,
+      desc: getData(locale, 'Index github desc'),
+      href: "https://github.com/gauthier-th",
+      blank: true
+    },
+    {
+      icon: <Archive color="black" />,
+      desc: getData(locale, 'Index projects desc'),
+      href: "/projects"
+    },
+    {
+      icon: <Mail color="black" />,
+      desc: getData(locale, 'Index contact desc'),
+      href: "/contact"
+    }
+  ]
+)
 
 const TileContent = (props: { icon: ReactNode, desc: string, hoveredTile: boolean }) => {
   const { icon, desc, hoveredTile } = props
@@ -54,23 +57,18 @@ const TileContent = (props: { icon: ReactNode, desc: string, hoveredTile: boolea
   </div>
 }
 
-const IndexPage = () => {
+const IndexPage = ({ locale }: { locale: string }) => {
   const [hoveredTile, setOveredTile] = useState<number|null>(null)
-  return <Layout title="Welcome on my website!" isIndex>
+  return <Layout {...getTitle(locale, 'index')} isIndex>
     <div className={styles.description}>
       <h3>
-        <p>
-          As you might have guessed, my name is Gauthier.
-        </p>
-        <p>
-          I'm a young French developer interested in programming various stuff, but mainly things on the web or with JavaScript.
-        </p>
+        <Translation locale={locale} translation='Index page description' />
       </h3>
     </div>
     <div className={styles.tilesContainer}>
       <div className={styles.tiles} onMouseLeave={() => setOveredTile(null)}>
         <AnimateSharedLayout type="crossfade">
-          {tiles.map((tile, idx) => (
+          {tiles(locale).map((tile, idx) => (
             <>
               {tile.blank && <a href={tile.href} target="_blank" onMouseEnter={() => setOveredTile(idx)}>
                 <TileContent {...tile} hoveredTile={hoveredTile === idx} />
