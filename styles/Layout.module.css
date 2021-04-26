@@ -53,7 +53,7 @@
 }
 
 .githubButton, .githubButton:hover {
-  width: 210px;
+  width: 150px;
   height: 45px;
   border: 2px solid #FFFFFF;
   color: #fff;
@@ -102,7 +102,7 @@
 .title > div {
   max-width: 700px;
   font-size: 50px;
-  line-height: 130px;
+  line-height: 92px;
 }
 .title h1 {
   margin: 0;
