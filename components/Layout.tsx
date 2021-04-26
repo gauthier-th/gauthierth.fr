@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import { motion, Variants, Transition } from 'framer-motion'
+import { motion, Variants, Transition, VariantLabels } from 'framer-motion'
 import { GitHub, ChevronRight } from 'react-feather'
 import styles from '../styles/Layout.module.css'
 
@@ -10,12 +10,6 @@ type Props = {
   pageTitle?: string,
   title?: string,
   isIndex?: boolean
-}
-
-const sealTransition: Transition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.4
 }
 
 const Layout = ({ children, pageTitle, title, isIndex }: Props) => {
@@ -57,13 +51,40 @@ const Layout = ({ children, pageTitle, title, isIndex }: Props) => {
       </div>
     </div>
     <footer className={styles.footer}>
-      <a href="https://github.com/gauthier-th" target="_blank">
-        Made with{' '}
-        <img src="https://twemoji.maxcdn.com/svg/2764.svg" alt="Seal Image" className={styles.heart} />
-        {' '}by me.
-      </a>
+      <motion.div layoutId="footer-made" transition={sealTransition}>
+        <a href="https://github.com/gauthier-th" target="_blank">
+          Made with{' '}
+          <img src="https://twemoji.maxcdn.com/svg/2764.svg" alt="Seal Image" className={styles.heart} />
+          {' '}by me.
+        </a>
+      </motion.div>
+      {!isIndex && <TitleTransition initial={{ opacity: 0, translateY: "30px", scale: 0.8 }}>
+        <div className={styles.links}>
+          <Link href="/">
+            <a>
+              Home
+            </a>
+          </Link>
+          <Link href="/projects">
+            <a>
+              My projects
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a>
+              Contact me
+            </a>
+          </Link>
+        </div>
+      </TitleTransition>}
     </footer>
   </div>
+}
+
+const sealTransition: Transition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.4
 }
 
 const titleVariants: Variants = {
@@ -88,12 +109,13 @@ const titleTransition: Transition = {
 }
 
 type TransitionProps = {
-  children?: ReactNode
+  children?: ReactNode,
+  initial?: string | object
 }
 
-const TitleTransition = ({ children }: TransitionProps) => (
+const TitleTransition = ({ children, initial }: TransitionProps) => (
   <motion.div
-    initial="initial"
+    initial={initial || "initial"}
     animate="in"
     variants={titleVariants}
     transition={titleTransition}

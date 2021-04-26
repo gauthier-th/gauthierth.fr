@@ -10,6 +10,7 @@
 }
 .link img {
   max-width: 24px;
+  margin: 0 3px;
 }
 .link svg {
   max-width: 30px;

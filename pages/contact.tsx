@@ -13,7 +13,7 @@ const ContactPage = () => (
         </div>
       </div>
       <div className={styles.link}>
-        <img src="https://discord.com/assets/f8389ca1a741a115313bede9ac02e2c0.svg" style={{ maxWidth: 30 }} />
+        <img src="https://discord.com/assets/f8389ca1a741a115313bede9ac02e2c0.svg" style={{ maxWidth: 30, margin: 0 }} />
         <div>
           Discord: Gauthier#0875
         </div>
