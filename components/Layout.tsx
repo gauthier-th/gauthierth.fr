@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import { motion, Variants, Transition, VariantLabels } from 'framer-motion'
+import { motion, Variants, Transition } from 'framer-motion'
 import { GitHub, ChevronRight } from 'react-feather'
 import styles from '../styles/Layout.module.css'
 
