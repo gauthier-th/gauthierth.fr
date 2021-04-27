@@ -19,7 +19,7 @@ const LangButton = () => {
   const router = useRouter()
   const locale = router.locale || router.defaultLocale || 'en'
   return (
-    <div className="text-right ml-4">
+    <div className="text-right">
       <Menu as="div" className="relative inline-block text-left" style={{ width: '4.8rem' }}>
         {({ open }) => (
           <>

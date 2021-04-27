@@ -69,7 +69,7 @@ const i18n: { [key: string]: i18nLang } = {
         Comme vous avez pu le deviner, je m'appelle Gauthier.
       </p>
       <p>
-        Je suis un jeune développeur Français programmant ci et ça, mais surtout des choses sur le web ou avec JavaScript.
+        Je suis un jeune développeur français programmant ci et ça, mais surtout des choses sur le web ou avec JavaScript.
       </p>
     </>
   }

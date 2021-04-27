@@ -42,3 +42,9 @@
   margin: 0 0 16px 0;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .tile, .tile:hover {
+    width: 100%;
+    max-width: 100%;
+  }
+}

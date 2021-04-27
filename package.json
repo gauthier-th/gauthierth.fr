@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.1.0",
+    "@types/react-responsive": "^8.0.2",
     "framer-motion": "^4.1.8",
     "next": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-feather": "^2.0.9"
+    "react-feather": "^2.0.9",
+    "react-responsive": "^8.2.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
