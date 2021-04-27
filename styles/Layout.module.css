@@ -28,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  height: 56px;
+  height: 66px;
   padding: 8px 0;
 }
 
@@ -50,6 +50,12 @@
   font-weight: normal;
   font-size: 30px;
   line-height: 36px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .githubButton, .githubButton:hover {
@@ -101,13 +107,13 @@
 }
 .title > div {
   max-width: 700px;
-  font-size: 50px;
   line-height: 92px;
 }
 .title h1 {
   margin: 0;
   color: #000;
   font-style: normal;
+  font-size: 100px;
   font-weight: 600;
 }
 .title img {

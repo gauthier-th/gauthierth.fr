@@ -5,6 +5,7 @@ import { motion, Variants, Transition } from 'framer-motion'
 import { GitHub, ChevronRight } from 'react-feather'
 import styles from '../styles/Layout.module.css'
 import { Translation, getData } from '../components/i18n'
+import LangButton from './LangButton'
 
 type Props = {
   children?: ReactNode
@@ -35,13 +36,16 @@ const Layout = ({ children, pageTitle, title, isIndex, locale }: Props) => {
               </a>
             </Link>
           </div>
-          <a className={styles.githubButton} href="https://github.com/gauthier-th" target="_blank">
-            <div>
-              <GitHub color="white" />
-              <span>GitHub</span>
-            </div>
-            <ChevronRight color="white" className={styles.chevronRight} />
-          </a>
+          <div className={styles.buttonsContainer}>
+            <a className={styles.githubButton} href="https://github.com/gauthier-th" target="_blank">
+              <div>
+                <GitHub color="white" />
+                <span>GitHub</span>
+              </div>
+              <ChevronRight color="white" className={styles.chevronRight} />
+            </a>
+            <LangButton />
+          </div>
         </div>
         <div className={styles.title}>
           <TitleTransition key={title}>

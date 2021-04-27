@@ -43,7 +43,7 @@ const projects = (locale: string): Project[] => (
 )
 
 const ProjectsPage = ({ locale }: { locale: string }) => (
-  <Layout {...getTitle(locale, 'index')}>
+  <Layout {...getTitle(locale, 'projects')}>
     <div className={styles.tiles}>
       {projects(locale).map(({ name, desc, href, image, backgroundPositionY }, idx) => (
         <a key={idx} href={href} className={styles.tile} target="_blank">

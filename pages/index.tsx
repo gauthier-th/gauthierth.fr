@@ -68,18 +68,20 @@ const IndexPage = ({ locale }: { locale: string }) => {
     <div className={styles.tilesContainer}>
       <div className={styles.tiles} onMouseLeave={() => setOveredTile(null)}>
         <AnimateSharedLayout type="crossfade">
-          {tiles(locale).map((tile, idx) => (
-            <>
-              {tile.blank && <a href={tile.href} target="_blank" onMouseEnter={() => setOveredTile(idx)}>
+          {tiles(locale).map((tile, idx) => {
+            if (tile.blank) {
+              return <a key={idx} href={tile.href} target="_blank" onMouseEnter={() => setOveredTile(idx)}>
                 <TileContent {...tile} hoveredTile={hoveredTile === idx} />
-              </a>}
-              {!tile.blank && <Link href={tile.href}>
+              </a>
+            }
+            else {
+              return <Link key={idx} href={tile.href}>
                 <a onMouseEnter={() => setOveredTile(idx)}>
                   <TileContent {...tile} hoveredTile={hoveredTile === idx} />
                 </a>
-              </Link>}
-            </>
-          ))}
+              </Link>
+            }
+          })}
         </AnimateSharedLayout>
       </div>
     </div>

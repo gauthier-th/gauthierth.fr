@@ -164,7 +164,7 @@ const data: { [key: string]: any } = {
     'Projects funcraft-api desc': 'Une api pour récupérer les statistiques du serveur Minecraft "FunCraft.net" !',
     'Index github desc': 'Suivez-moi sur GitHub',
     'Index projects desc': 'Consultez mes projets',
-    'Index contact desc': 'Entrez en contact avec moi'
+    'Index contact desc': 'Comment me contacter'
   }
 }
 

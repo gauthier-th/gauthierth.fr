@@ -4,9 +4,9 @@ import type { AppProps } from 'next/app'
 import { AnimateSharedLayout } from 'framer-motion'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { locale } = useRouter()
+  const { locale, defaultLocale } = useRouter()
   return <AnimateSharedLayout>
-    <Component {...pageProps} locale={locale} />
+    <Component {...pageProps} locale={locale || defaultLocale || 'en'} />
   </AnimateSharedLayout>
 }
 
