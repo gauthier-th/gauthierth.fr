@@ -1,12 +1,24 @@
 {
   "name": "with-typescript",
   "version": "1.0.0",
+  "description": "My personnal website",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauthier-th/gauthierth.fr.git"
+  },
+  "keywords": [],
+  "author": "gauthier-th (mail@gauthierth.fr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gauthier-th/gauthierth.fr/issues"
+  },
+  "homepage": "https://github.com/gauthier-th/gauthierth.fr#readme",
   "dependencies": {
     "@headlessui/react": "^1.1.0",
     "@types/react-responsive": "^8.0.2",
@@ -25,6 +37,5 @@
     "postcss": "^8.2.13",
     "tailwindcss": "^2.1.2",
     "typescript": "4.0"
-  },
-  "license": "MIT"
+  }
 }

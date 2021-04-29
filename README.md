@@ -4,6 +4,8 @@
 
 Source code of my awesome website.
 
+Create with Next.js and React in TypeScript. Contains i18n and SSR.
+
 -> https://gauthierth.fr/
 
 ## Usage
@@ -31,3 +33,9 @@ or
 ```
 yarn start -p PORT
 ```
+
+## Licence
+
+Licence MIT
+
+Copyright (c) 2021 gauthier-th (mail@gauthierth.fr)
