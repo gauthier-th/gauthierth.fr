@@ -71,6 +71,9 @@ const i18n: { [key: string]: i18nLang } = {
       <p>
         Je suis un jeune développeur français programmant ci et ça, mais surtout des choses sur le web ou avec JavaScript.
       </p>
+      <p>
+        Allez donc jeter un &oelig;il à ce que je fais :
+      </p>
     </>
   }
 }
