@@ -81,9 +81,9 @@ const Layout = ({ children, pageTitle, title, isIndex, locale }: Props) => {
               {getData(locale, 'Footer link projects')}
             </a>
           </Link>
-          <Link href="/contact">
+          <Link href="/about">
             <a>
-              {getData(locale, 'Footer link contact')}
+              {getData(locale, 'Footer link about')}
             </a>
           </Link>
         </div>

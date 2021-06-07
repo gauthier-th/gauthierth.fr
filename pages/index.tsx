@@ -1,7 +1,7 @@
 import { useState, ReactNode } from 'react'
 import Link from 'next/link'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion"
-import { GitHub, Archive, Mail } from 'react-feather'
+import { GitHub, Archive, FileText } from 'react-feather'
 import styles from '../styles/index.module.css'
 import Layout from '../components/Layout'
 import { Translation, getTitle, getData } from '../components/i18n'
@@ -27,9 +27,9 @@ const tiles = (locale: string): Tile[] => (
       href: "/projects"
     },
     {
-      icon: <Mail color="black" />,
-      desc: getData(locale, 'Index contact desc'),
-      href: "/contact"
+      icon: <FileText color="black" />,
+      desc: getData(locale, 'Index about desc'),
+      href: "/about"
     }
   ]
 )

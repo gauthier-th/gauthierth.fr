@@ -17,17 +17,23 @@ const i18n: { [key: string]: i18nLang } = {
     'Error page button': () => <>
       Home here!!
     </>,
-    'Contact page description': () => <>
-      If you want to get in touch with me for any reason, don't hesitate to contact me with one of the following:
+    'About page description': () => <>
+      <h3>Hey!</h3>
+      <p>My name is Gauthier, and I'm a student at ESIREM, an engineering school in Dijon (in France).</p>
+      <p>I started programming with PHP several years ago, and since then I got to like JavaScript (Node.js, React, Express, ...) as well as all its uses to create projects mostly around the web, but sometimes I also use other tools like C ++ or Java.</p>
+      <p>I like to create websites, to program small tools, but I also occasionally play games (Minecraft, LoL, CS-GO, ...). </p>
     </>,
-    'Contact page mail': () => <>
-      Mail: <a href="mailto:mail@gauthierth.fr">mail@gauthierth.fr</a>
+    'About page links': () => <>
+      Don't hesitate to contact me:
     </>,
-    'Contact page discord': () => <>
-      Discord: Gauthier#0875
+    'About page mail': () => <>
+      By email, classic: <a href="mailto:mail@gauthierth.fr">mail<span style={{ fontFamily: 'initial' }}>@</span>gauthierth.fr</a>
     </>,
-    'Contact page github': () => <>
-      GitHub: <a href="https://github.com/gauthier-th">gauthier-th</a>
+    'About page discord': () => <>
+      On Discord, more cool: Gauthier#0875 (or on <a href="https://discord.gg/vCjEufP" target="_blank">my server</a>)
+    </>,
+    'About page github': () => <>
+      My GitHub, to check my projects: <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
     </>,
     'Index page description': () => <>
       <p>
@@ -35,6 +41,9 @@ const i18n: { [key: string]: i18nLang } = {
       </p>
       <p>
         I'm a young French developer interested in programming various stuff, but mainly things on the web or with JavaScript.
+      </p>
+      <p>
+        You should definitely go take a look at what I'm doing: 
       </p>
     </>
   },
@@ -52,17 +61,23 @@ const i18n: { [key: string]: i18nLang } = {
     'Error page button': () => <>
       Par ici !!
     </>,
-    'Contact page description': () => <>
-      Si vous voulez rentrer en contact avec moi pour une quelconque raison, contactez-moi avec une de ces méthode :
+    'About page description': () => <>
+      <h3>Salut !</h3>
+      <p>Mon nom c'est Gauthier, et je suis actuellement étudiant à l'ESIREM, une école d'ingénieur à Dijon.</p>
+      <p>J'ai commencé la programmation avec PHP il y a plusieurs années déjà, et j'ai depuis appris à maîtriser et à apprécier le JavaScript (Node.js, React, Express, ...) ainsi que toutes ses utilisations pour créer des projets principalement autours du Web, mais cela ne m'empêche pas d'utiliser parfois d'autres outils comme le C++ ou Java.</p>
+      <p>J'aime créer des sites, programmer des petits outils, mais aussi faire de temps en temps des jeux (Minecraft, LoL, CS-GO, ...).</p>
     </>,
-    'Contact page mail': () => <>
-      Mail : <a href="mailto:mail@gauthierth.fr">mail@gauthierth.fr</a>
+    'About page links': () => <>
+      N'hésitez pas à me contacter :
     </>,
-    'Contact page discord': () => <>
-      Discord : Gauthier#0875
+    'About page mail': () => <>
+      Par mail, classique : <a href="mailto:mail@gauthierth.fr">mail<span style={{ fontFamily: 'initial' }}>@</span>gauthierth.fr</a>
     </>,
-    'Contact page github': () => <>
-      GitHub : <a href="https://github.com/gauthier-th">gauthier-th</a>
+    'About page discord': () => <>
+      Sur Discord, plus cool : Gauthier#0875 (ou sur <a href="https://discord.gg/vCjEufP" target="_blank">mon serveur</a>)
+    </>,
+    'About page github': () => <>
+      Mon GitHub, pour mes projets : <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
     </>,
     'Index page description': () => <>
       <p>
@@ -72,7 +87,7 @@ const i18n: { [key: string]: i18nLang } = {
         Je suis un jeune développeur français programmant ci et ça, mais surtout des choses sur le web ou avec JavaScript.
       </p>
       <p>
-        Allez donc jeter un &oelig;il à ce que je fais :
+        Vous devriez aller jeter un &oelig;il à ce que je fais :
       </p>
     </>
   }
@@ -103,9 +118,9 @@ const titles: { [key: string]: i18nTitles } = {
       title: 'Page not found',
       pageTitle: 'Page not found'
     },
-    contact: {
-      title: 'Contact me!',
-      pageTitle: 'Contact me'
+    about: {
+      title: 'About me!',
+      pageTitle: 'About me'
     },
     index: {
       title: 'Welcome on my website!'
@@ -120,9 +135,9 @@ const titles: { [key: string]: i18nTitles } = {
       title: 'Page introuvable',
       pageTitle: 'Page introuvable'
     },
-    contact: {
-      title: 'Contactez moi !',
-      pageTitle: 'Contactez moi'
+    about: {
+      title: 'À propos de moi',
+      pageTitle: 'À propos de moi'
     },
     index: {
       title: 'Bienvenue sur mon site !'
@@ -147,27 +162,27 @@ const data: { [key: string]: any } = {
     'Website title': 'Gauthier\'s website',
     'Footer link home': 'Home',
     'Footer link projects': 'My projects',
-    'Footer link contact': 'Contact me',
+    'Footer link about': 'About me',
     'Projects lordbot desc': 'A multi-purpose Discord bot for moderation, fun stuff and with a web dashboard.',
     'Projects conjugation-fr desc': 'A Node.js module for fast conjugation of french verbs.\nThis package is based on the Verbiste database. It contains more than 7000 verbs.',
     'Projects embed-visualizer desc': 'A React Component to render Discord-like embeds.\nUsefull to preview an embed on a web dashboard.',
     'Projects funcraft-api desc': 'An API to retrieve statistics from the Minecraft server "FunCraft.net"!',
     'Index github desc': 'Follow me on GitHub',
     'Index projects desc': 'Check my projects',
-    'Index contact desc': 'How to contact me'
+    'Index about desc': 'Few infos about me'
   },
   fr: {
     'Website title': 'Site de Gauthier',
     'Footer link home': 'Accueil',
     'Footer link projects': 'Mes projets',
-    'Footer link contact': 'Contactez moi',
+    'Footer link about': 'À propos',
     'Projects lordbot desc': 'Un bot Discord multifonction pour de la modération, du diversissement et avec un panel web.',
     'Projects conjugation-fr desc': 'Un module Node.js pour faire de la conjugaison en français.\nLe module est basé sur la base de données Verbiste, contenant plus de 7000 verbes.',
     'Projects embed-visualizer desc': 'Un composant React pour afficher des embeds Discord.\nUtile pour prévisualiser un embed sur un panel web.',
     'Projects funcraft-api desc': 'Une api pour récupérer les statistiques du serveur Minecraft "FunCraft.net" !',
     'Index github desc': 'Suivez-moi sur GitHub',
     'Index projects desc': 'Consultez mes projets',
-    'Index contact desc': 'Comment me contacter'
+    'Index about desc': 'Quelques infos sur moi'
   }
 }
 
