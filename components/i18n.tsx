@@ -3,6 +3,50 @@ type i18nLang = {
 }
 
 const i18n: { [key: string]: i18nLang } = {
+  de: {
+    'Footer made by': () => <>
+      Geschaffen mit{' '}
+      <img src="https://twemoji.maxcdn.com/svg/2764.svg" alt="love" />
+      {' '}von mir.
+    </>,
+    'Error page description': () => <>
+      Tut mir leid, aber ich kann die Seite, die du suchst, nicht finden.
+      <br />
+      Du solltest vielleicht wieder auf die Startseite kommen.
+    </>,
+    'Error page button': () => <>
+      Home here!!
+    </>,
+    'About page description': () => <>
+      <h3>Hey!</h3>
+      <p>Mein Name ist Gauthier und ich bin Student an der ESIREM, einer Ingenieurschule in Dijon (Frankreich).</p>
+      <p>Ich habe vor einigen Jahren mit PHP angefangen zu programmieren. Seitdem habe ich JavaScript (Node.js, React, Express, ...) und all seine Verwendungsmöglichkeiten kennengelernt, um Projekte zu erstellen, die sich hauptsächlich um das Web drehen, aber manchmal verwende ich auch andere Tools wie C++ oder Java.</p>
+      <p>Ich erstelle gerne Webseiten, programmiere kleine Tools, aber ich spiele auch gelegentlich Spiele (Minecraft, LoL, CS-GO, ...). </p>
+    </>,
+    'About page links': () => <>
+      Zögere nicht, mich zu kontaktieren:
+    </>,
+    'About page mail': () => <>
+      Per E-Mail, klassisch: <a href="mailto:mail@gauthierth.fr">mail<span style={{ fontFamily: 'initial' }}>@</span>gauthierth.fr</a>
+    </>,
+    'About page discord': () => <>
+      Auf Discord, mehr cool: Gauthier#0875 (oder über <a href="https://discord.gg/vCjEufP" target="_blank">meinem Server</a>)
+    </>,
+    'About page github': () => <>
+      Mein GitHub, checke meine Projekte: <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
+    </>,
+    'Index page description': () => <>
+      <p>
+        Wie du sicher noch weißt, ist mein Name Gauthier.
+      </p>
+      <p>
+        Ich bin ein junger französischer Entwickler, der sich für das Programmieren verschiedener Dinge interessiert, aber hauptsächlich für Dinge im Web oder mit JavaScript.
+      </p>
+      <p>
+        Du solltest dir unbedingt ansehen, was ich mache: 
+      </p>
+    </>
+  },
   en: {
     'Footer made by': () => <>
       Made with{' '}
@@ -93,26 +137,24 @@ const i18n: { [key: string]: i18nLang } = {
   }
 }
 
-type TranslationProps = {
-  locale: string,
-  translation: string,
-  params?: object
-}
-
-export const Translation = ({ locale, translation, params }: TranslationProps) => {
-  const Element = i18n[locale][translation]
-  return <Element {...params} />
-}
-
-
-type i18nTitles = {
-  [key: string]: {
-    title?: string,
-    pageTitle?: string
-  }
-}
-
 const titles: { [key: string]: i18nTitles } = {
+  de: {
+    '404': {
+      title: 'Seite nicht gefunden',
+      pageTitle: 'Seite nicht gefunden'
+    },
+    about: {
+      title: 'Über mich!',
+      pageTitle: 'Über mich'
+    },
+    index: {
+      title: 'Willkommen auf meiner Website!'
+    },
+    projects: {
+      title: 'Meine fantastischen Projekte',
+      pageTitle: 'Meine Projekte'
+    }
+  },
   en: {
     '404': {
       title: 'Page not found',
@@ -149,15 +191,20 @@ const titles: { [key: string]: i18nTitles } = {
   }
 }
 
-export const getTitle = (locale: string, page: string): { title?: string, pageTitle?: string, locale: string } => {
-  return {
-    ...titles[locale][page],
-    locale
-  }
-}
-
-
 const data: { [key: string]: any } = {
+  de: {
+    'Website title': 'Gauthier\'s website',
+    'Footer link home': 'Startseite',
+    'Footer link projects': 'Meine Projekte',
+    'Footer link about': 'Über mich',
+    'Projects lordbot desc': 'Ein vielseitiger Discord-Bot für Moderation, lustige Sachen und mit einem Web-Dashboard.',
+    'Projects conjugation-fr desc': 'Ein Node.js-Modul zur schnellen Konjugation französischer Verben.\nDieses Paket basiert auf der Verbiste-Datenbank. Sie enthält mehr als 7000 Verben.',
+    'Projects embed-visualizer desc': 'Eine React-Komponente zum Rendern von Discord-ähnlichen Einbettungen.\nNützlich für die Vorschau einer Einbettung auf einem Web-Dashboard.',
+    'Projects funcraft-api desc': 'Eine API zum Abrufen von Statistiken vom Minecraft-Server "FunCraft.net"!',
+    'Index github desc': 'Folge mir auf GitHub',
+    'Index projects desc': 'Checke meine Projekte',
+    'Index about desc': 'Ein paar Infos über mich'
+  },
   en: {
     'Website title': 'Gauthier\'s website',
     'Footer link home': 'Home',
@@ -183,6 +230,31 @@ const data: { [key: string]: any } = {
     'Index github desc': 'Suivez-moi sur GitHub',
     'Index projects desc': 'Consultez mes projets',
     'Index about desc': 'Quelques infos sur moi'
+  }
+}
+
+type TranslationProps = {
+  locale: string,
+  translation: string,
+  params?: object
+}
+
+export const Translation = ({ locale, translation, params }: TranslationProps) => {
+  const Element = i18n[locale][translation]
+  return <Element {...params} />
+}
+
+type i18nTitles = {
+  [key: string]: {
+    title?: string,
+    pageTitle?: string
+  }
+}
+
+export const getTitle = (locale: string, page: string): { title?: string, pageTitle?: string, locale: string } => {
+  return {
+    ...titles[locale][page],
+    locale
   }
 }
 
