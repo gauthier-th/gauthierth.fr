@@ -33,11 +33,11 @@ const i18n: { [key: string]: i18nLang } = {
       On Discord, more cool: Gauthier#0875 (or on <a href="https://discord.gg/vCjEufP" target="_blank">my server</a>)
     </>,
     'About page github': () => <>
-      My GitHub, to check my projects: <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
+      My GitHub, check my projects: <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
     </>,
     'Index page description': () => <>
       <p>
-        As you might have guessed, my name is Gauthier.
+        As you surely remember, my name is Gauthier.
       </p>
       <p>
         I'm a young French developer interested in programming various stuff, but mainly things on the web or with JavaScript.
