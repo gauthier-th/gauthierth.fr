@@ -1,6 +1,6 @@
 import { useState, ReactNode } from 'react'
 import Link from 'next/link'
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion"
+import { motion, LayoutGroup, AnimatePresence } from "framer-motion"
 import { GitHub, Archive, FileText } from 'react-feather'
 import styles from '../styles/index.module.css'
 import Layout from '../components/Layout'
@@ -59,33 +59,35 @@ const TileContent = (props: { icon: ReactNode, desc: string, hoveredTile: boolea
 
 const IndexPage = ({ locale }: { locale: string }) => {
   const [hoveredTile, setOveredTile] = useState<number|null>(null)
-  return <Layout {...getTitle(locale, 'index')} isIndex>
-    <div className={styles.description}>
-      <h3>
-        <Translation locale={locale} translation='Index page description' />
-      </h3>
-    </div>
-    <div className={styles.tilesContainer}>
-      <div className={styles.tiles} onMouseLeave={() => setOveredTile(null)}>
-        <AnimateSharedLayout type="crossfade">
-          {tiles(locale).map((tile, idx) => {
-            if (tile.blank) {
-              return <a key={idx} href={tile.href} target="_blank" onMouseEnter={() => setOveredTile(idx)}>
-                <TileContent {...tile} hoveredTile={hoveredTile === idx} />
-              </a>
-            }
-            else {
-              return <Link key={idx} href={tile.href}>
-                <a onMouseEnter={() => setOveredTile(idx)}>
+  return (
+    <Layout {...getTitle(locale, 'index')} isIndex>
+      <div className={styles.description}>
+        <h3>
+          <Translation locale={locale} translation='Index page description' />
+        </h3>
+      </div>
+      <div className={styles.tilesContainer}>
+        <div className={styles.tiles} onMouseLeave={() => setOveredTile(null)}>
+          <LayoutGroup type="crossfade">
+            {tiles(locale).map((tile, idx) => {
+              if (tile.blank) {
+                return <a key={idx} href={tile.href} target="_blank" onMouseEnter={() => setOveredTile(idx)}>
                   <TileContent {...tile} hoveredTile={hoveredTile === idx} />
                 </a>
-              </Link>
-            }
-          })}
-        </AnimateSharedLayout>
+              }
+              else {
+                return (
+                  <Link key={idx} href={tile.href} onMouseEnter={() => setOveredTile(idx)}>
+                    <TileContent {...tile} hoveredTile={hoveredTile === idx} />
+                  </Link>
+                );
+              }
+            })}
+          </LayoutGroup>
+        </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+  );
 }
 
 export default IndexPage

@@ -7,10 +7,8 @@ const ErrorPage = ({ locale }: { locale: string }) => (
     <p>
       <Translation locale={locale} translation='Error page description' />
     </p>
-    <Link href="/">
-      <a className="gradientButton">
-        <Translation locale={locale} translation='Error page button' />
-      </a>
+    <Link href="/" className="gradientButton">
+      <Translation locale={locale} translation='Error page button' />
     </Link>
   </Layout>
 )
