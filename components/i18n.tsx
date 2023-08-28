@@ -59,25 +59,25 @@ const i18n: { [key: string]: i18nLang } = {
       Vous devriez sûrement retourner à l'accueil
     </>,
     'Error page button': () => <>
-      Par ici !!
+      Par ici!!
     </>,
     'About page description': () => <>
-      <h3>Salut !</h3>
+      <h3>Salut!</h3>
       <p>Mon nom c'est Gauthier, et je suis actuellement étudiant à l'ESIREM, une école d'ingénieur à Dijon.</p>
       <p>J'ai commencé la programmation avec PHP il y a plusieurs années déjà, et j'ai depuis appris à maîtriser et à apprécier le JavaScript (Node.js, React, Express, ...) ainsi que toutes ses utilisations pour créer des projets principalement autours du Web, mais cela ne m'empêche pas d'utiliser parfois d'autres outils comme le C++ ou Java.</p>
       <p>J'aime créer des sites, programmer des petits outils, mais aussi faire de temps en temps des jeux (Minecraft, LoL, CS-GO, ...).</p>
     </>,
     'About page links': () => <>
-      N'hésitez pas à me contacter :
+      N'hésitez pas à me contacter:
     </>,
     'About page mail': () => <>
-      Par mail, classique : <a href="mailto:mail@gauthierth.fr">mail<span style={{ fontFamily: 'initial' }}>@</span>gauthierth.fr</a>
+      Par mail, classique: <a href="mailto:mail@gauthierth.fr">mail<span style={{ fontFamily: 'initial' }}>@</span>gauthierth.fr</a>
     </>,
     'About page discord': () => <>
-      Sur Discord, plus cool : Gauthier#0875 (ou sur <a href="https://discord.gg/vCjEufP" target="_blank">mon serveur</a>)
+      Sur Discord, plus cool: Gauthier#0875 (ou sur <a href="https://discord.gg/vCjEufP" target="_blank">mon serveur</a>)
     </>,
     'About page github': () => <>
-      Mon GitHub, vérifie mes projets : <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
+      Mon GitHub, vérifie mes projets: <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
     </>,
     'Index page description': () => <>
       <p>
@@ -87,7 +87,7 @@ const i18n: { [key: string]: i18nLang } = {
         Je suis un jeune développeur français programmant ci et ça, mais surtout des choses sur le web ou avec JavaScript.
       </p>
       <p>
-        Vous devriez aller jeter un &oelig;il à ce que je fais :
+        Vous devriez aller jeter un &oelig;il à ce que je fais:
       </p>
     </>
   },
@@ -165,7 +165,7 @@ const titles: { [key: string]: i18nTitles } = {
       pageTitle: 'À propos de moi'
     },
     index: {
-      title: 'Bienvenue sur mon site !'
+      title: 'Bienvenue sur mon site!'
     },
     projects: {
       title: 'Mes superbes projets',
@@ -213,7 +213,7 @@ const data: { [key: string]: any } = {
     'Projects lordbot desc': 'Un bot Discord multifonction pour de la modération, du diversissement et avec un panel web.',
     'Projects conjugation-fr desc': 'Un module Node.js pour faire de la conjugaison en français.\nLe module est basé sur la base de données Verbiste, contenant plus de 7000 verbes.',
     'Projects embed-visualizer desc': 'Un composant React pour afficher des embeds Discord.\nUtile pour prévisualiser un embed sur un panel web.',
-    'Projects funcraft-api desc': 'Une api pour récupérer les statistiques du serveur Minecraft "FunCraft.net" !',
+    'Projects funcraft-api desc': 'Une api pour récupérer les statistiques du serveur Minecraft "FunCraft.net"!',
     'Index github desc': 'Suivez-moi sur GitHub',
     'Index projects desc': 'Consultez mes projets',
     'Index about desc': 'Quelques infos sur moi'
