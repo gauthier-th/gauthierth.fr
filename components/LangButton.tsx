@@ -12,6 +12,10 @@ const langs: Langs = {
   fr: {
     name: 'French',
     icon: <img src="https://twemoji.maxcdn.com/svg/1f1eb-1f1f7.svg" className="w-5 h-5" />
+  },
+  de: {
+    name: 'Deutsch',
+    icon: <img src="https://twemoji.maxcdn.com/svg/1f1e9-1f1ea.svg" className="w-5 h-5" />
   }
 }
 

@@ -20,22 +20,22 @@
   },
   "homepage": "https://github.com/gauthier-th/gauthierth.fr#readme",
   "dependencies": {
-    "@headlessui/react": "^1.1.0",
-    "@types/react-responsive": "^8.0.2",
-    "framer-motion": "^4.1.8",
-    "next": "latest",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-feather": "^2.0.9",
-    "react-responsive": "^8.2.0"
+    "@headlessui/react": "^1.7.17",
+    "@types/react-responsive": "^8.0.5",
+    "framer-motion": "^10.16.1",
+    "next": "13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
+    "react-responsive": "^9.0.2"
   },
   "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.13",
-    "tailwindcss": "^2.1.2",
-    "typescript": "4.0"
+    "@types/node": "^20.5.7",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.2"
   }
 }

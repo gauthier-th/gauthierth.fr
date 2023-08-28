@@ -18,78 +18,80 @@ type Props = {
 
 const Layout = ({ children, pageTitle, title, isIndex, locale }: Props) => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 700px)' })
-  return <div className={styles.container}>
-    <Head>
-      <title>{pageTitle ? pageTitle.trim() + " | " + getData(locale, 'Website title') : getData(locale, 'Website title')}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <div className={styles.content}>
-      <header className={styles.header}>
-        <div className={styles.gradient} />
-      </header>
-      <div className='container'>
-        <div className={styles.topbar}>
-          <div>
-            <Link href="/">
-              <a className={styles.gauthierth}>
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>{pageTitle ? pageTitle.trim() + " | " + getData(locale, 'Website title') : getData(locale, 'Website title')}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className={styles.content}>
+        <header className={styles.header}>
+          <div className={styles.gradient} />
+        </header>
+        <div className='container'>
+          <div className={styles.topbar}>
+            <div>
+              <Link href="/" className={styles.gauthierth}>
+
                 {(!isIndex || isSmallScreen) && <motion.img src="/seal.jpg" layoutId="seal-img" transition={sealTransition} />}
                 <motion.h2 layoutId="topbar-title">gauthier-th</motion.h2>
+
+              </Link>
+            </div>
+            <div className={styles.buttonsContainer}>
+              <a className={styles.githubButton} href="https://github.com/gauthier-th" target="_blank">
+                <div>
+                  <GitHub color="white" />
+                  <span>GitHub</span>
+                </div>
+                <ChevronRight color="white" className={styles.chevronRight} />
               </a>
+              <a className={styles.githubButtonSmall} href="https://github.com/gauthier-th" target="_blank">
+                <div>
+                  <GitHub color="white" />
+                </div>
+              </a>
+              <LangButton />
+            </div>
+          </div>
+          <div className={styles.title}>
+            <TitleTransition key={title}>
+              <h1>{title}</h1>
+            </TitleTransition>
+            {(isIndex && !isSmallScreen) && <motion.img src="/seal.jpg" layoutId="seal-img" transition={sealTransition} />}
+          </div>
+          {children}
+        </div>
+      </div>
+      <footer className={styles.footer}>
+        <motion.div layoutId="footer-made" transition={sealTransition}>
+          <a href="https://github.com/gauthier-th/gauthierth.fr" target="_blank">
+            <Translation locale={locale} translation='Footer made by' />
+          </a>
+        </motion.div>
+        {!isIndex && <TitleTransition initial={{ opacity: 0, translateY: "30px", scale: 0.8 }}>
+          <div className={styles.links}>
+            <Link href="/">
+
+              {getData(locale, 'Footer link home')}
+
+            </Link>
+            <Link href="/projects">
+
+              {getData(locale, 'Footer link projects')}
+
+            </Link>
+            <Link href="/about">
+
+              {getData(locale, 'Footer link about')}
+
             </Link>
           </div>
-          <div className={styles.buttonsContainer}>
-            <a className={styles.githubButton} href="https://github.com/gauthier-th" target="_blank">
-              <div>
-                <GitHub color="white" />
-                <span>GitHub</span>
-              </div>
-              <ChevronRight color="white" className={styles.chevronRight} />
-            </a>
-            <a className={styles.githubButtonSmall} href="https://github.com/gauthier-th" target="_blank">
-              <div>
-                <GitHub color="white" />
-              </div>
-            </a>
-            <LangButton />
-          </div>
-        </div>
-        <div className={styles.title}>
-          <TitleTransition key={title}>
-            <h1>{title}</h1>
-          </TitleTransition>
-          {(isIndex && !isSmallScreen) && <motion.img src="/seal.jpg" layoutId="seal-img" transition={sealTransition} />}
-        </div>
-        {children}
-      </div>
+        </TitleTransition>}
+      </footer>
     </div>
-    <footer className={styles.footer}>
-      <motion.div layoutId="footer-made" transition={sealTransition}>
-        <a href="https://github.com/gauthier-th/gauthierth.fr" target="_blank">
-          <Translation locale={locale} translation='Footer made by' />
-        </a>
-      </motion.div>
-      {!isIndex && <TitleTransition initial={{ opacity: 0, translateY: "30px", scale: 0.8 }}>
-        <div className={styles.links}>
-          <Link href="/">
-            <a>
-              {getData(locale, 'Footer link home')}
-            </a>
-          </Link>
-          <Link href="/projects">
-            <a>
-              {getData(locale, 'Footer link projects')}
-            </a>
-          </Link>
-          <Link href="/about">
-            <a>
-              {getData(locale, 'Footer link about')}
-            </a>
-          </Link>
-        </div>
-      </TitleTransition>}
-    </footer>
-  </div>
+  );
 }
 
 const sealTransition: Transition = {
