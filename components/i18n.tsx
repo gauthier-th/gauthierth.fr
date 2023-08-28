@@ -118,7 +118,7 @@ const i18n: { [key: string]: i18nLang } = {
       Per E-Mail, klassisch: <a href="mailto:mail@gauthierth.fr">mail<span style={{ fontFamily: 'initial' }}>@</span>gauthierth.fr</a>
     </>,
     'About page discord': () => <>
-      Auf Discord, mehr cool: Gauthier#0875 (oder über <a href="https://discord.gg/vCjEufP" target="_blank">meinem Server</a>)
+      Auf Discord, noch cooler: Gauthier#0875 (oder über <a href="https://discord.gg/vCjEufP" target="_blank">meinem Server</a>)
     </>,
     'About page github': () => <>
       Mein GitHub, checke meine Projekte: <a href="https://github.com/gauthier-th">https://github.com/gauthier-th</a>
