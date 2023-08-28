@@ -5,10 +5,6 @@ import { ChevronDown } from 'react-feather'
 
 type Langs = { [key: string]: { name: string; icon: JSX.Element } }
 const langs: Langs = {
-  de: {
-    name: 'Deutsch',
-    icon: <img src="https://twemoji.maxcdn.com/svg/1f1e9-1f1ea.svg" className="w-5 h-5" />
-  },
   en: {
     name: 'English',
     icon: <img src="https://twemoji.maxcdn.com/svg/1f1ec-1f1e7.svg" className="w-5 h-5" />
@@ -16,6 +12,10 @@ const langs: Langs = {
   fr: {
     name: 'French',
     icon: <img src="https://twemoji.maxcdn.com/svg/1f1eb-1f1f7.svg" className="w-5 h-5" />
+  },
+  de: {
+    name: 'Deutsch',
+    icon: <img src="https://twemoji.maxcdn.com/svg/1f1e9-1f1ea.svg" className="w-5 h-5" />
   }
 }
 
