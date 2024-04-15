@@ -6,7 +6,7 @@ const i18n: { [key: string]: i18nLang } = {
   en: {
     'Footer made by': () => <>
       Made with{' '}
-      <img src="https://twemoji.maxcdn.com/svg/2764.svg" alt="love" />
+      <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/2764.svg" alt="love" />
       {' '}by me.
     </>,
     'Error page description': () => <>
@@ -50,7 +50,7 @@ const i18n: { [key: string]: i18nLang } = {
   fr: {
     'Footer made by': () => <>
       Créé avec{' '}
-      <img src="https://twemoji.maxcdn.com/svg/2764.svg" alt="amour" />
+      <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/15.1.0/svg/2764.svg" alt="amour" />
       {' '}par moi.
     </>,
     'Error page description': () => <>
