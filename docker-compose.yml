@@ -1,0 +1,12 @@
+name: gauthierth-fr
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules 
+    ports:
+      - 3015:3000
+    environment:
+      - TZ=Europe/Paris
