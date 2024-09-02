@@ -10,3 +10,4 @@ services:
       - 3015:3000
     environment:
       - TZ=Europe/Paris
+    restart: unless-stopped
