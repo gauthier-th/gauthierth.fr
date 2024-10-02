@@ -1,12 +1,13 @@
 {
-  "name": "with-typescript",
+  "name": "gauthierth.fr",
   "version": "1.0.0",
   "description": "My personnal website",
+  "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -20,22 +21,19 @@
   },
   "homepage": "https://github.com/gauthier-th/gauthierth.fr#readme",
   "dependencies": {
-    "@headlessui/react": "^1.1.0",
-    "@types/react-responsive": "^8.0.2",
-    "framer-motion": "^4.1.8",
-    "next": "^12.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-feather": "^2.0.9",
-    "react-responsive": "^8.2.0"
+    "@types/react-dom": "^18.3.0",
+    "next": "^14.2.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.13",
-    "tailwindcss": "^2.1.2",
-    "typescript": "4.0"
+    "@types/node": "22.7.1",
+    "@types/react": "18.3.9",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "5.6.2"
   }
 }

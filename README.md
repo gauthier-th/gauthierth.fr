@@ -4,7 +4,7 @@
 
 Source code of my awesome website.
 
-Create with Next.js and React in TypeScript. Contains i18n and SSR.
+Create with Next.js and React in TypeScript, with TailwindCSS.
 
 -> https://gauthierth.fr/
 
@@ -12,30 +12,30 @@ Create with Next.js and React in TypeScript. Contains i18n and SSR.
 
 __Installation:__
 ```
-yarn
+pnpm i
 ```
 
 __Start development server:__
 ```
-yarn dev
+pnpm dev
 ```
 
 __Create production build:__
 ```
-yarn build
+pnpm build
 ```
 
 __Start production build:__
 ```
-yarn start
+pnpm start
 ```
 or
 ```
-yarn start -p PORT
+pnpm start -p PORT
 ```
 
 ## Licence
 
 Licence MIT
 
-Copyright (c) 2021 gauthier-th (mail@gauthierth.fr)
+Copyright (c) 2024 gauthier-th (mail@gauthierth.fr)

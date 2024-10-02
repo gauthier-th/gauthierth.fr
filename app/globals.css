@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  background-color: #0c0c0c;
+  color: #fff;
+}
+
+#sky-background {
+  position: fixed;
+  width: 100vw;
+  height: calc(1080 * 2px);
+  background-image: url("/sky.png");
+  background-repeat: repeat;
+  background-size: cover contain;
+  animation: scroll-up 45s linear infinite;
+  z-index: -10;
+  opacity: .5;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

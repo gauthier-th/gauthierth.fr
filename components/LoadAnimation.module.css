@@ -1,0 +1,67 @@
+.gtLoaderBackground {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  /* z-index: 30; */
+  transition: left .6s cubic-bezier(.5,0,.8,-.02), right .6s cubic-bezier(.5,0,.8,-.02);
+}
+.gtLoaderBackground.left {
+  border-right: 72vw solid transparent;
+  border-top: 165vh solid #1b1b1b;
+  width: 0;
+  left: 1px;
+}
+.gtLoaderBackground.right {
+  border-left: 72vw solid transparent;
+  border-bottom: 165vh solid #0e0e0e;
+  width: 100vw;
+  right: 1px;
+}
+.gtLoaderBackground.left.visible {
+  left: -100vw;
+}
+.gtLoaderBackground.right.visible {
+  right: -100vw;
+}
+
+.gtLogo {
+  position: fixed;
+  top: calc(50% - 110px);
+  left: calc(50% - 110px);
+  height: 219px;
+  max-width: 70vw;
+  width: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  border-radius: 100%;
+  /* z-index: 40; */
+  transform: scale(1);
+  transition: top cubic-bezier(0,.25,.25,1) .6s, transform cubic-bezier(0,.25,.25,1) .5s;
+  animation-name: scaleGT;
+  animation-duration: .75s;
+  animation-timing-function: cubic-bezier(0,.75,.25,1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+.gtLogo.pinned {
+  top: calc(8px - 219px/4);
+  transform: scale(.5);
+}
+@media (max-width: 300px) {
+  .gtLogo {
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    height: 150px;
+  }
+}
+@keyframes scaleGT {
+  0% {
+    transform: scale(.3) rotate(-60deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
