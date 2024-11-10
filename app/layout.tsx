@@ -28,7 +28,7 @@ export default function RootLayout({
         <div id="sky-background" />
         <StarsBackground />
         <div className="min-h-screen flex flex-col justify-center items-center py-8">
-          <nav className="fixed top-0 w-full h-16 bg-black/50 backdrop-blur border-b border-gray-600/80 flex items-center justify-end sm:justify-center">
+          <nav className="fixed top-0 z-10 w-full h-16 bg-black/50 backdrop-blur border-b border-gray-600/80 flex items-center justify-end sm:justify-center">
             <div className="hidden sm:grid grid-cols-2 items-center gap-44 text-lg md:text-xl">
               <div className="flex gap-6">
                 <SmoothLink destId="">Home</SmoothLink>

@@ -109,7 +109,7 @@ export default async function Page() {
             <Component
               key={key}
               href={project.link}
-              className="w-full max-w-md bg-black rounded-xl -z-10 top-0 hover:-top-2 transition-all duration-200 overflow-hidden"
+              className="w-full max-w-md bg-black rounded-xl top-0 hover:-top-2 transition-all duration-200 overflow-hidden"
               target={project.newtab ? "_blank" : undefined}
             >
               <div className="w-full relative h-48">
