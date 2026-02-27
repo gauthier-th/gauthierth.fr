@@ -13,6 +13,13 @@ interface Project {
 }
 const projects: Project[] = [
   {
+    title: "Seerr",
+    description: "Seerr is a free and open source software application for managing requests for your media library.",
+    image: "/seerr.jpg",
+    link: "https://github.com/seerr-team/seerr",
+    newtab: true,
+  },
+  {
     title: "conjugation-fr",
     description: "A Node.js module for fast conjugation of French verbs.\nThis package is based on the Verbiste database. It contains more than 7000 verbs.",
     image: "/conjugation-fr.png",
@@ -45,13 +52,6 @@ const projects: Project[] = [
     description: "An API to retrieve upcoming Divia bus and streetcar schedules in Dijon.",
     image: "/divia-api.png",
     link: "https://github.com/gauthier-th/divia-api",
-    newtab: true,
-  },
-  {
-    title: "Jellyseerr",
-    description: "Jellyseerr is a free and open source software application for managing requests for your media library.",
-    image: "/jellyseerr.png",
-    link: "https://github.com/Fallenbagel/jellyseerr",
     newtab: true,
   }
 ]
