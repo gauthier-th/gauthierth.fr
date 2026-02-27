@@ -1,6 +1,7 @@
 name: gauthierth-fr
 services:
   app:
+    container_name: gauthierth-fr
     build:
       context: .
     volumes:
